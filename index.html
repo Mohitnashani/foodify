@@ -3,28 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodify - Meal Planning</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Foodify - Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Welcome to Foodify</h1>
-        <p>Personalized meal planning and grocery delivery</p>
+        <h1>Welcome to Foodify!</h1>
+        <p>Your personalized meal planner.</p>
     </header>
-    
+
     <section class="signup">
-        <h2>Create your profile</h2>
+        <h2>Create Your Profile</h2>
         <form id="signup-form">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="preferences">Dietary Preferences:</label>
-            <input type="text" id="preferences" name="preferences" placeholder="e.g. Vegan, Gluten-Free" required>
-            <button type="submit">Sign Up</button>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="diet">Dietary Preference:</label>
+            <select id="diet" required>
+                <option value="vegan">Vegan</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="low-carb">Low-Carb</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="paleo">Paleo</option>
+            </select>
+
+            <button type="submit">Create Profile</button>
         </form>
     </section>
 
+    <section id="meal-plan-section" class="hidden">
+        <h2>Your Personalized Meal Plan</h2>
+        <p id="meal-plan"></p>
+        <button id="generate-shopping-list">Generate Shopping List</button>
+    </section>
+
     <footer>
-        <p>© 2024 Foodify. All rights reserved.</p>
+        <p>&copy; 2024 Foodify. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
